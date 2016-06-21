@@ -1,0 +1,23 @@
+{
+  "name": "lato_styleguide",
+  "version": "1.0.0",
+  "description": "Styleguide for lato_view",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LatoTeam/lato_styleguide.git"
+  },
+  "author": "Lato Team",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LatoTeam/lato_styleguide/issues"
+  },
+  "homepage": "https://github.com/LatoTeam/lato_styleguide#readme",
+  "devDependencies": {
+    "devbridge-styleguide": "^0.4.10",
+    "gulp": "^3.9.1"
+  }
+}
