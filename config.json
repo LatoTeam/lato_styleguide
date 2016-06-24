@@ -1,0 +1,14 @@
+{
+  "port": "1470",
+  "src_folder": ["./src/**/*"],
+  "dist_folder": "./dist/",
+  "del_folder": "./dist",
+  "sass_src": "./src/css/template/**/*.scss",
+  "sass_dest": "./src/css",
+  "autoprefixer_options": {
+    "browsers": ["last 3 versions", "ie > 9", "and_chr >= 2.3"]
+  },
+  "js_src": "./src/js/template/*.js",
+  "js_file_name": "application.js",
+  "js_dest": "./src/js/"
+}

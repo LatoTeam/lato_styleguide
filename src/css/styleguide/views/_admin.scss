@@ -1,0 +1,29 @@
+#admin-wrapper {
+  display: flex;
+  width: 100%;
+  @include clearfix();
+}
+
+.main-content {
+  flex: 1;
+  height: 100vh;
+  overflow: auto;
+  .content-wrapper {
+    margin-top: 25px;
+    padding: 0 30px;
+    @include clearfix();
+  }
+}
+
+.admin-section-title {
+  font-size: em(35px);
+  margin-bottom: 0;
+}
+
+@include mq-max(766px) {
+  .main-content {
+    .content-wrapper {
+      margin-top: 35px;
+    }
+  }
+}

@@ -1,0 +1,39 @@
+body {
+  background-color: #f2f2f2;
+  overflow: auto;
+  &.is-menu-open {
+    overflow: hidden;
+  }
+}
+
+.s_main {
+  padding-top: 103px;
+  transform: translateX(0);
+  transition: transform 0.3s $snappy;
+  section {
+    padding: 35px 0;
+  }
+  .is-menu-open & {
+    transform: translateX(240px);
+    overflow: hidden;
+  }
+}
+#showcase {
+  position: relative;
+  height: 650px;
+}
+.s_introduction {
+  padding: 40px 0;
+}
+.s_section-heading {
+  font-size: em(18px);
+  font-weight: bold;
+  text-transform: uppercase;
+  span {
+    color: #999;
+  }
+}
+.s_big-heading {
+  font-weight: 400;
+  font-size: em(40px);
+}

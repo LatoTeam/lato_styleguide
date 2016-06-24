@@ -1,0 +1,44 @@
+.search-bar {
+  position: relative;
+  min-width: 270px;
+}
+
+.search-field {
+  width: 70%;
+  border: 0;
+  padding: 7px 17px;
+  background: $search-bar-bg;
+  box-shadow: $search-bar-shadow;
+  transition: all 0.4s ease;
+  &:focus {
+    outline: none;
+    box-shadow: $search-bar-focus-shadow;
+  }
+}
+
+.search-button {
+  border: none;
+  position: absolute;
+  height: 100%;
+  padding: 7px 12px;
+  background-color: $search-button-bg;
+  color: $search-button-color;
+  box-shadow: 0px 2px 6px rgba(black, 0.1);
+  svg {
+    @include size(15px);
+    path {
+      fill: $search-button-color;
+    }
+  }
+}
+
+.search-bar.rounded {
+  .search-field {
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+  }
+  .search-button {
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+}

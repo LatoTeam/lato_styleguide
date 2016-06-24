@@ -1,0 +1,55 @@
+.flashes-container {
+  width: 100%;
+  position: absolute;
+  top: -25px;
+  left: 0;
+  overflow: hidden;
+  transition: opacity 0.75s ease, transform 0.55s $snappy;
+  z-index: z(highest)-1;
+  .flash {
+    width: 100%;
+    padding: 10px 5px 10px 30px;
+    background-color: $flash-default-bg;
+    color: white;
+    font-size: em(16px);
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.25s ease, transform 0.3s $snappy;
+    &.danger {
+     background-color: $flash-danger-bg;
+    }
+    &.success {
+      background-color: $flash-success-bg;
+    }
+    &.info {
+      background-color: $flash-info-bg;
+    }
+    &.warning {
+      background-color: $flash-warning-bg;
+    }
+    &:nth-child(2) {
+      transition-delay: 0.15s;
+    }
+    &:nth-child(3) {
+      transition-delay: 0.25s;
+    }
+    &:nth-child(4) {
+      transition-delay: 0.35s;
+    }
+    &:nth-child(5) {
+      transition-delay: 0.45s;
+    }
+    &:last-child {
+      box-shadow: $flash-shadow;
+    }
+  }
+  &.is-remove {
+    opacity: 0;
+    transform: translateY(-100%);
+    z-index: -1;
+    .flash {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+  }
+}

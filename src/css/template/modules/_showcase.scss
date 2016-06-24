@@ -1,0 +1,109 @@
+.browser {
+  background-color: #f1f1f1;
+  width: 690px;
+  height: 480px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  opacity: 0.999;
+  border-radius: 5px;
+  box-shadow: -10px 10px 38px 0 rgba(1, 1, 1, 0.53);
+  .status-bar {
+    background-color: #ccc;
+    width: 100%;
+    height: 20px;
+    position: relative;
+    z-index: 10;
+    .buttons {
+      background-color: #df7065;
+      width: 9px;
+      height: 9px;
+      margin-top: -4px;
+      position: absolute;
+      top: 50%;
+      left: 7px;
+      border-radius: 50%;
+      &:before,
+      &:after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        border-radius: 50%;
+      }
+      &:before {
+        background-color: #e6c646;
+        left: 13px;
+      }
+      &:after {
+        background-color: #5bcc8b;
+        left: 26px;
+      }
+    }
+  }
+  .tab-bar {
+    background-color: #e6e6e6;
+    width: 100%;
+    height: 18px;
+    position: relative;
+    z-index: 10;
+    &:before {
+      content: '';
+      width: 82px;
+      position: absolute;
+      bottom: 100%;
+      left: 55px;
+      border-width: 0 5px 14px 5px;
+      border-style: solid;
+      border-color: transparent;
+      border-bottom-color: #e6e6e6;
+    }
+  }
+  .window {
+    width: 100%;
+    height: 442px;
+    cursor: url('../../assets/img/grab.png'), auto;
+    overflow: hidden;
+    position: relative;
+    .loader {
+      display: none;
+      background-color: #f1f1f1;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 10;
+      &:before {
+        content: '';
+        width: 20px;
+        height: 20px;
+        margin: auto;
+        border: 5px dashed  #2c3e50;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+      }
+    }
+    .scroll-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    &.grabbed {
+      cursor: url('../../assets/img/grabbed.png'), auto;
+    }
+  }
+  &.loading .window .loader {
+    display: block;
+  }
+}

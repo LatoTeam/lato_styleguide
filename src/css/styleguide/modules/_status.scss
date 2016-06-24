@@ -1,0 +1,39 @@
+.general-status {
+  text-align: center;
+  @include clearfix();
+}
+
+.status {
+  &.icon-status {
+    @include size(18px);
+    margin: 0 auto;
+    svg {
+      display: inline-block;
+      @include size(18px);
+      + svg {
+        margin-right: 15px;
+      }
+    }
+    &.true {
+      svg path {
+        fill: $jungle-green;
+      }
+    }
+    &.false {
+      svg path {
+        fill: $scarlet;
+      }
+    }
+  }
+  &.round-status {
+    @include size(18px);
+    border-radius: 50%;
+    margin: 0 auto;
+    &.true {
+      background-color: $jungle-green;
+    }
+    &.false {
+      background-color: $scarlet;
+    }
+  }
+}
