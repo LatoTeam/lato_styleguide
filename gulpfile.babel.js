@@ -81,6 +81,11 @@ gulp.task('production', ['styles', 'scripts'], () => {
   runSequence('copy');
 });
 
+gulp.task('deploy', () => {
+  return gulp.src('./dist/**/*')
+    .pipe($.ghPages());
+});
+
 // This is the default task :)
 gulp.task('default', ['clean'], () => {
   const startTime = Date.now();
