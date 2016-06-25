@@ -4,7 +4,9 @@
   "description": "Styleguide for lato_view",
   "main": "gulpfile.js",
   "scripts": {
-    "start": "gulp serve --pretty"
+    "start": "gulp serve --pretty",
+    "dist": "gulp production",
+    "deploy": "gulp production && gulp deploy"
   },
   "repository": {
     "type": "git",
