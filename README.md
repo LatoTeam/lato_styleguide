@@ -1,1 +1,0 @@
-# lato_styleguide
